@@ -23,14 +23,16 @@ fun main() {
         return part1(sums)
     }
 
-    val input1Test = readInput("Day01_1_test").map { it.toInt() }
-    check(part1(input1Test) == 7)
+    // test if implementation meets criteria from the description, like:
+    val testInput1 = readInput("Day01_1_test").map { it.toInt() }
+    check(part1(testInput1) == 7)
 
     val input1 = readInput("Day01_1").map { it.toInt() }
     println("part 1: ${part1(input1)}")
 
-    val input2Test = readInput("Day01_2_test").map { it.toInt() }
-    check(part2(input2Test) == 5)
+    // test if implementation meets criteria from the description, like:
+    val testInput2 = readInput("Day01_2_test").map { it.toInt() }
+    check(part2(testInput2) == 5)
 
     val input2 = readInput("Day01_2").map { it.toInt() }
     println("part 2: ${part2(input2)}")
