@@ -1,4 +1,6 @@
 fun main() {
+
+    // How many measurements are larger than the previous measurement?
     fun part1(input: List<Int>): Int {
         var result = 0
         for (i in 1..input.lastIndex) {
@@ -7,6 +9,7 @@ fun main() {
         return result
     }
 
+    // Consider sums of a three-measurement sliding window. How many sums are larger than the previous sum?
     fun part2(input: List<Int>): Int {
         if (input.size < 3) {
             return 0
