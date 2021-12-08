@@ -83,5 +83,5 @@ fun main() {
     // test if implementation meets criteria from the description, like:
     check(part2(testInput1) == 61229)
 
-    println("part 2: ${part2(input1)}")
+    println("part 2: ${part2(input1)}") // 933305
 }
