@@ -10,7 +10,7 @@ fun main() {
     }
 
     fun getSortedSequence(sequence: String): String {
-        return sequence.toCharArray().asList().sorted().joinToString("")
+        return sequence.asIterable().sorted().joinToString("")
     }
 
     fun part2(input: List<String>): Int {
@@ -41,17 +41,20 @@ fun main() {
             )
 
             // 6: digit with 6 segments that does not have all segments of 7 (0 and 9 do)
-            val str6 = length6.first { s -> !(s.toCharArray().asList().containsAll(str7.toCharArray().asList())) }
+            val str6 = length6.first { s -> !(s.asIterable().toList().containsAll(str7.asIterable().toList())) }
             digitMap[str6] = "6"
-            val segmentF = str1.toCharArray().first { char -> str6.toCharArray().contains(char) }
-            val segmentC = str1.toCharArray().first { c -> c != segmentF }
+            val segmentF = str1.asIterable().first { char -> str6.asIterable().contains(char) }
+            val segmentC = str1.asIterable().first { c -> c != segmentF }
 
             // 5: digit with 5 segments that does not have segment 'c' (2 and 3 do)
             val str5 = length5.first { s -> !s.contains(segmentC) }
             digitMap[str5] = "5"
 
+            val s = ""
+            s.length
+
             // 9: digit with 6 segments that has all segments of 5 (0 does not).
-            val str9 = length6.filter { s -> s != str6 }.first { s -> s.toCharArray().asList().containsAll(str5.toCharArray().asList()) }
+            val str9 = length6.filter { s -> s != str6 }.first { s -> s.asIterable().toList().containsAll(str5.asIterable().toList()) }
             digitMap[str9] = "9"
 
             // 0: digit with 6 segments that is not 6 or 9

@@ -72,7 +72,7 @@ fun main() {
             addValidNeighborsToQueue(x, y, basinNr, matrix, queue)
         }
 
-        return matrix.reduce { acc, pairs -> (acc + pairs).toMutableList() }
+        return matrix.flatten()
             .filter { it.second != null }
             .groupBy { it.second }
             .map { it.value.size }
