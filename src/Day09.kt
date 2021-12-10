@@ -77,7 +77,7 @@ fun main() {
             .groupBy { it.second }
             .map { it.value.size }
             .sortedDescending()
-            .subList(0, 3)
+            .take(3)
             .reduce { acc, i -> acc * i }
     }
 
