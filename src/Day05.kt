@@ -1,8 +1,4 @@
-data class Point(val x: Int, val y: Int)
-data class Line(val point1: Point, val point2: Point)
-
 fun main() {
-
     fun getLines(input: List<String>): List<Line> {
         return input.map { lineStr ->
             lineStr
