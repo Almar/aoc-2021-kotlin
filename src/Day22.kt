@@ -1,5 +1,5 @@
 import java.lang.Integer.max
-import java.lang.Math.min
+import java.lang.Integer.min
 
 fun main() {
     data class Cuboid(val rangeX: IntRange, val rangeY: IntRange, val rangeZ: IntRange, val on: Boolean = false) {
